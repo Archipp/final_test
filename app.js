@@ -13,18 +13,6 @@ request({
 }, (err, response, data) => {
     for (let i = 0; i < 1; i++) {
         for (let k = 0; k < data[0]["items"].length; k++) {
-          /*result[k] = ("{"+
-            "Latitude " +" : "+
-              data[i]["items"][k]["lat"] +", "+
-              "\nLongitude " + " : "+
-              data[i]["items"][k]["lng"] + ", "+
-              "\nName " + " : "+
-              data[i]["items"][k]["name"] + ", "+
-              "\nTime " + " : "+
-              data[i]["items"][k]["time"] + ", "+
-              "\nSpeed " + " : "+
-              data[i]["items"][k]["speed"] + ", "+"}"
-          );*/
           lat = data[i]["items"][k]["lat"] 
           lng = data[i]["items"][k]["lng"]
           name = data[i]["items"][k]["name"]
@@ -44,10 +32,6 @@ request({
           if (err) throw err;
           console.log('Le fichier a été sauvegardé !');
         });
-        /*fs.writeFile('result.json', JSON.stringify({ data: data[i]["items"][k] }), (err) => {
-          if (err) throw err;
-          console.log('Le fichier a été sauvegardé !');
-        });*/
       }
       
 
